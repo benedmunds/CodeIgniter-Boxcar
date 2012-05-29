@@ -6,7 +6,7 @@
 *		  ben.edmunds@gmail.com
 *         @benedmunds
 *
-* Location: http://github.com/benedmunds/CodeIgniter-Boxcar
+* Location: http://github.com/benedmunds/CodeIgniter-Boxcar.io
 *
 * Created:  05.29.2012
 *
@@ -70,6 +70,16 @@ class Boxcar {
 	 * @var string
 	 */
 	private $default_icon_url;
+
+
+	public function __construct() {
+		$ci = get_instance();
+		$ci->load->config('boxcar', TRUE);
+
+		$this->api_key = $ci->config->item('api_key', 'boxcar');
+		$this->secret  = $ci->config->item('api_secret', 'boxcar');
+		$this->default_icon_url = null;
+	}
 	
 	/**
 	 * Make a new instance of the API client
@@ -82,7 +92,15 @@ class Boxcar {
 		$this->api_key = $api_key;
 		$this->secret = $secret;
 		$this->default_icon_url = $default_icon_url;
-		echo 'init';
+	}
+	
+	/**
+	 * Set the default icon
+	 * 
+	 * @param string $default_icon_url url to a 57x57 icon to use with a message
+	 */
+	public function set_icon($default_icon_url) {
+		$this->default_icon_url = $default_icon_url;
 	}
 	
 	/**

@@ -8,12 +8,11 @@ Install the library using sparks
 
 
 ##Usage
-In your controller simply load the library, set your login info, and call the API  
+In config/boxcar.php set your API key and secret.   
+  
+In your controller simply load the library and call the API  
    
 	$this->load->library('boxcar');
-
-	//authentication details
-	$this->boxcar->init('yourKey', 'yourSecret', 'http://store.ukd1.co.uk.s3.amazonaws.com/ukd1_small.png');
 
 	// send a broadcast (to all your subscribers)
 	$broadcast = $this->boxcar->broadcast('Test Name', 'Test Broadcast, this was sent at ' . date('r'));
