@@ -6,7 +6,7 @@
 *		  ben.edmunds@gmail.com
 *         @benedmunds
 *
-* Location: http://github.com/benedmunds/CodeIgniter-Boxcar.io
+* Location: http://github.com/benedmunds/CodeIgniter-Boxcar
 *
 * Created:  05.29.2012
 *
