@@ -21,6 +21,6 @@ In your controller simply load the library, set your login info, and call the AP
 	var_dump($broadcast);
 
 
-See [the Boxcar Provider API documentation](http://boxcar.io/help/api/providers) for API details.
+See the [Boxcar Provider API documentation](http://boxcar.io/help/api/providers) for API details.
 
 Library created by [Ben Edmunds](http://benedmunds.com).
